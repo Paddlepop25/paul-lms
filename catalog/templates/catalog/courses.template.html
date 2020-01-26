@@ -10,7 +10,9 @@
     <h1>Courses</h1>
     <ul>
         {% for course in all_courses %}
-        <li>{{course.title}} is conducted by {{course.instructor.first_name}} {{course.instructor.last_name}}</li>
+        <li>{{course.title}} is conducted by {{course.instructor.first_name}} {{course.instructor.last_name}}
+        <a href="{% url 'update_course' course_id=course.id %}">Edit course</a>
+        </li>
         {% endfor %}
     </ul>
 </body>
