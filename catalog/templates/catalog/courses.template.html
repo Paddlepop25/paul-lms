@@ -12,6 +12,7 @@
         {% for course in all_courses %}
         <li>{{course.title}} is conducted by {{course.instructor.first_name}} {{course.instructor.last_name}}
         <a href="{% url 'update_course' course_id=course.id %}">Edit course</a>
+        <a href="{% url 'confirm_delete' course_id=course.id %}">Delete course</a>
         </li>
         {% endfor %}
     </ul>
